@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <open-data  class="userinfo-avatar" type="userAvatarUrl"></open-data>
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+  <view>
+    <button class="gotomyinfo">点击进入</button>
+  </view>
+  
+  <view class="btn-area">
+    <navigator url="/pages/index/index" hover-class="navigator-hover">跳转到新页面</navigator>
+    <navigator url="/pages/logs/logs" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+    <navigator url="/pages/info/info" open-type="redirect" hover-class="other-navigator-hover">切换 Tab</navigator>
+    <!-- <navigator target="miniProgram" open-type="navigate" app-id="" path="" extra-data="" version="release">打开绑定的小程序</navigator> -->
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

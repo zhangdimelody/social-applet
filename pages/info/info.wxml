@@ -1,0 +1,17 @@
+<!--pages/info/info.wxml-->
+
+<view class="section">
+  <text>昵称：{{nickname}}</text>
+  <input  bindinput="bindKeyInput" placeholder="请输入昵称"/>
+  <picker mode="date" value="{{birthdate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      生日 : {{birthdate}}
+    </view>
+  </picker>
+  <radio-group class="radio-group" bindchange="radioChange">
+    性别：<label class="radio" wx:for="{{sexes}}" wx:key="sexeslist">
+      <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}</label>
+  </radio-group>
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+		disabled="{{disabled}}" bindtap="commitForm"> 提交 </button>
+</view>
